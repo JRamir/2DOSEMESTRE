@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Imagen y sonido</title>
+
+<style>
+body {
+	background: url(images/fondo.jpg)  center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;;
+	
+}
+
+h1 {
+	font-family: monospace;
+	text-align: center;
+	font-size :80px;
+	color :#D0A4A5;
+
+}
+
+
+
+.img1 a {
+	display: block;
+	width: 151px;
+	height: 150px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	background: url(images/a.png);
+	text-indent: -9999px;
+	float: left;
+	margin-left:200px;
+	
+}
+
+.img2 a {
+	display: block;
+	width: 151px;
+	height: 150px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	background: url(images/c.png);
+	text-indent: -9999px;
+	float: right;
+	margin-right:200px;
+}
+	
+
+	
+
+.img3 a {
+	display: block;
+	width: 151px;
+	height: 150px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	background: url(images/p.png);
+	text-indent: -9999px;
+	float:center;
+	
+	
+}
+	
+.effects {
+	
+	margin-top :325px;
+
+}
+	
+</style>
+
+</head>
+<body>
+
+	<h1>La granja de don ferm&iacuten</h1>
+
+
+	           
+				<div class="effects">
+
+				<div class="img1"><a href="#current" onclick="clicksound1.playclip()">Efecto 1</a></div>
+
+
+
+				<div class="img2"><a href="#current" onclick="clicksound2.playclip()">Efecto 2</a></div>
+
+
+				<div class="img3"><a href="#current" onclick="clicksound3.playclip()"><img src="images/c.png"></a></div>
+
+
+				
+
+
+				</div><!-- /.effects -->
+
+
+	<script>
+		var html5_audiotypes = { //define la lista de las extensiones de los sonidos. 
+			"mp3": "audio/mpeg",
+			"mp4": "audio/mp4",
+			"ogg": "audio/ogg",
+			"wav": "audio/wav"
+		}
+
+		function createsound(sound){
+			var html5audio = document.createElement('audio')
+
+			if (html5audio.canPlayType){ //chequear soporte HTML5
+				for (var i=0; i<arguments.length; i++){
+					var source = document.createElement('source')
+					source.setAttribute('src', arguments[i])
+					if (arguments[i].match(/\.(\w+)$/i))
+						source.setAttribute('type', html5_audiotypes[RegExp.$1])
+					html5audio.appendChild(source)
+				}
+				html5audio.load()
+				html5audio.playclip = function(){
+					html5audio.pause()
+					html5audio.currentTime=0
+					html5audio.play()
+				}
+				return html5audio
+			}
+			else {
+				return { 
+					playclip:function(){
+						throw new Error("Tu navegador no soporta HTML5 Audio!")
+					}
+				}
+			}
+		}
+
+		//Iniciar los sonidos:
+
+		var clicksound1=createsound("download/a.ogg", "download/a.mp3")
+		var clicksound2=createsound("download/c.ogg", "download/c.mp3")
+		var clicksound3=createsound("download/p.ogg", "download/p.mp3")
+		
+
+		</script>	
+</body>
+</html>
