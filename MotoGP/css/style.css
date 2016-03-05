@@ -1,0 +1,111 @@
+body {
+
+background: url(../imagenes/fondo.jpg) no-repeat center center fixed; -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+
+}
+ .col-lg-4 h4{
+  color: #black;
+  text-align: ;
+
+}
+
+  h1 {
+  color: black;
+  text-align: ;
+ font-size :80px;
+ font-family :impact;
+}
+ .moto {
+  color: #000000;
+  text-align: center;
+  font-size: 100px;
+
+}
+.nav-justified > li:last-child > a {
+  border-bottom: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+@media (min-width: 768px) {
+  .nav-justified {
+    max-height: 52px;
+  }
+  .nav-justified > li > a {
+    border-right: 1px solid #d5d5d5;
+    border-left: 1px solid #fff;
+  }
+  .nav-justified > li:first-child > a {
+    border-left: 0;
+    border-radius: 5px 0 0 5px;
+  }
+  .nav-justified > li:last-child > a {
+    border-right: 0;
+    border-radius: 0 5px 5px 0;
+}
+.Main {
+    width: 80%;
+    max-width:800px;
+    margin: 20px auto;
+    overflow:;
+    }
+    .slides img {
+    width: 100%;
+    max-width:1000px;
+    margin: 5px auto;
+    overflow:;
+    }
+     .slides {
+    width: 50%;
+    
+   
+    }
+  .slidesjs-pagination{
+    background: black;
+    list-style: none;
+    overflow:hidden; 
+}
+ .slidesjs-pagination li{
+    float: left;
+
+  }
+  .slidesjs-pagination li a{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+    .slidesjs-pagination li a:hover {
+      background: #black;
+
+  }
+  .slides .active{
+    background: #000;
+  }
+  .slidesjs-navigation{
+    
+    color: #fff;
+    text-decoration: none; 
+    display: block;
+    padding: 10px 20px;
+    float: right;
+    width: 1920px;
+  }
+  .row{
+    display:block;
+  
+  }
+  .row p {
+color:white;
+font-size:70px;
+    
+  }
+  .col-md-4 p {
+color:white;
+font-size:30px;
+    
+  }
+  
