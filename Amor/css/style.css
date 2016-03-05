@@ -1,0 +1,25 @@
+
+body {
+ background: url(../imagenes/fondo.jpg) no-repeat center center fixed; -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover; 
+}
+
+p {
+  font-family: satisfy ;
+  font-size: 60px;
+  margin-top: 80px;
+  color: white;
+}
+
+
+.efecto{
+  margin-top: 200px;
+  font-size: 40px;
+  font-family: Satisfy ;
+  
+  color: #f7f6f4;
+  width: 900px;
+}
+
